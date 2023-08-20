@@ -43,7 +43,7 @@ jobs:
           github-tag: "v${{env.VERSION}}"
           github-token: "${{secrets.GHUB_TOKEN}}"
   
-          name: "${{env.RELEASE_NAME}}"
+          name: "No Enderman Grief"
           version: "${{env.VERSION}}"
           version-type: release
   
