@@ -44,7 +44,7 @@ jobs:
           github-token: "${{secrets.GHUB_TOKEN}}"
   
           name: "No Enderman Grief"
-          version: "${{env.VERSION}}"
+          version: "1.0.0"
           version-type: release
   
           loaders: fabric
