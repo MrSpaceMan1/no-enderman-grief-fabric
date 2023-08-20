@@ -3,13 +3,13 @@
 	"id": "no-enderman-grief",
 	"version": "${version}",
 	"name": "no-enderman-grief",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Prevents enderman from picking up blocks",
 	"authors": [
-		"Me!"
+		"MrSpaceMan1"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://github.com/MrSpaceMan1/no-enderman-grief-fabric",
+		"sources": "https://github.com/MrSpaceMan1/no-enderman-grief-fabric"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/no-enderman-grief/icon.png",
@@ -17,25 +17,15 @@
 	"entrypoints": {
 		"main": [
 			"co.github.mrspaceman1.noendermangrief.ExampleMod"
-		],
-		"client": [
-			"co.github.mrspaceman1.noendermangrief.ExampleModClient"
 		]
 	},
 	"mixins": [
-		"no-enderman-grief.mixins.json",
-		{
-			"config": "no-enderman-grief.client.mixins.json",
-			"environment": "client"
-		}
+		"no-enderman-grief.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.14.22",
 		"minecraft": "~1.20.1",
 		"java": ">=17",
 		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
 	}
 }
