@@ -18,26 +18,30 @@ jobs:
         os: [ubuntu-22.04]
     runs-on: ${{ matrix.os }}
     steps:
-      - name: checkout repository
+      - name: Checkout repository
         uses: actions/checkout@v3
-      - name: validate gradle wrapper
+        
+      - name: Validate gradle wrapper
         uses: gradle/wrapper-validation-action@v1
-      - name: setup jdk ${{ matrix.java }}
+        
+      - name: Setup jdk ${{ matrix.java }}
         uses: actions/setup-java@v3
         with:
           java-version: ${{ matrix.java }}
           distribution: 'microsoft'
-      - name: make gradle wrapper executable
+          
+      - name: Make gradle wrapper executable
         if: ${{ runner.os != 'Windows' }}
         run: chmod +x ./gradlew
-      - name: build
+        
+      - name: Build
         run: ./gradlew build
 
       - name: Publish (GitHub)
         uses: Kir-Antipov/mc-publish@v3.2
         with:
           github-tag: "v${{env.VERSION}}"
-          github-token: "${{secrets.HUB_TOKEN}}"
+          github-token: "${{secrets.GHUB_TOKEN}}"
   
           name: "${{env.RELEASE_NAME}}"
           version: "${{env.VERSION}}"
