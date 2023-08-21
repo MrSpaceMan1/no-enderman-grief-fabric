@@ -11,6 +11,6 @@ import static co.github.mrspaceman1.noendermangrief.ExampleMod.LOGGER;
 public class PickUpBlockGoalMixin {
     @Inject(at=@At("HEAD"), method = "canStart", cancellable = true)
     public void onCanStart(CallbackInfoReturnable<Boolean> cir){
-        cir.setReturnValue(true);
+        cir.setReturnValue(false);
     }
 }

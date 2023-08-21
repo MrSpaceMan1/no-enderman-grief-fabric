@@ -40,11 +40,11 @@ jobs:
       - name: Publish (GitHub)
         uses: Kir-Antipov/mc-publish@v3.2
         with:
-          github-tag: "v1.0.1"
+          github-tag: "v1.1.0"
           github-token: "${{secrets.GHUB_TOKEN}}"
   
           name: "No Enderman Grief"
-          version: "1.0.1"
+          version: "1.1.0"
           version-type: release
   
           loaders: fabric
