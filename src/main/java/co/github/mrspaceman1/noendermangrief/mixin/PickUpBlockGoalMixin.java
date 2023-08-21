@@ -12,6 +12,5 @@ public class PickUpBlockGoalMixin {
     @Inject(at=@At("HEAD"), method = "canStart", cancellable = true)
     public void onCanStart(CallbackInfoReturnable<Boolean> cir){
         cir.setReturnValue(true);
-        LOGGER.warn("Enderman tried to pick up block");
     }
 }
