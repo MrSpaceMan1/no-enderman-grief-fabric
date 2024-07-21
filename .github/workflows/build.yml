@@ -12,7 +12,7 @@ jobs:
       matrix:
         # Use these Java versions
         java: [
-          17,    # Current Java LTS & minimum supported by Minecraft
+          21,    # Current Java LTS & minimum supported by Minecraft
         ]
         # and run on both Linux and Windows
         os: [ubuntu-22.04]
@@ -40,11 +40,14 @@ jobs:
       - name: Publish (GitHub)
         uses: Kir-Antipov/mc-publish@v3.2
         with:
-          github-tag: "v1.1.0"
+          github-tag: "v1.2.0"
           github-token: "${{secrets.GHUB_TOKEN}}"
-  
+
+          modrinth-id: sMNXgxUg                                             #The id of your modrinth project
+          modrinth-token: "${{env.MODRINTH_TOKEN}}"
+          
           name: "No Enderman Grief"
-          version: "1.1.0"
+          version: "1.2.0"
           version-type: release
   
           loaders: fabric
