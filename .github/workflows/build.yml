@@ -44,7 +44,7 @@ jobs:
           github-token: "${{secrets.GHUB_TOKEN}}"
 
           modrinth-id: sMNXgxUg                                             #The id of your modrinth project
-          modrinth-token: "${{env.MODRINTH_TOKEN}}"
+          modrinth-token: "${{secrets.MODRINTH}}"
           
           name: "No Enderman Grief"
           version: "1.2.0"
