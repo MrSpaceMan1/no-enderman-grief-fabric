@@ -5,12 +5,10 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import static co.github.mrspaceman1.noendermangrief.ExampleMod.LOGGER;
-
-@Mixin(targets = "net.minecraft.entity.mob.EndermanEntity$PickUpBlockGoal")
-public class PickUpBlockGoalMixin {
-    @Inject(at=@At("HEAD"), method = "canStart", cancellable = true)
+@Mixin(targets = "net.minecraft.world.entity.monster.EnderMan$EndermanTakeBlockGoal")
+public class EndermanTakeBlockGoalMixin {
+    @Inject(at=@At("HEAD"), method = "canUse", cancellable = true)
     public void onCanStart(CallbackInfoReturnable<Boolean> cir){
-        cir.setReturnValue(false);
+        cir.setReturnValue(true);
     }
 }
